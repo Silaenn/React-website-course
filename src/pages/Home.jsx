@@ -1,10 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import HeroImage from "../assets/img/hero.png";
 import { kelasTerbaru, dataSwiper } from "../data/index";
-import { IconButton } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -35,37 +33,37 @@ const Home = () => {
     <div className="homepage">
       <header className="w-100 min-vh-100 d-flex align-items-center overflow-hidden">
         <Container>
-          <Row className="header-box d-flex align-items-center pt-lg-5 ">
-            <Col lg="6" className="">
+          <Row className="header-box d-flex align-items-center justify-content-between pt-lg-5">
+            <Col lg="6" className="animate__animated animate__fadeInUp">
               <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">
                 Temukan <br /> <span>Bakat Kreatifmu</span> <br /> Bersama Kami!{" "}
               </h1>
-              <p className="mb-4 ">
-                {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut nam
-                repellat est doloribus a consectetur! */}
+              <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">
                 Selamat datang di{" "}
                 <span style={{ fontWeight: "bold" }}>Ngoding.</span> salah satu
                 tempat kursus IT yang canggih dan di akui sebagai saluran bakat
                 anak indonesia
               </p>
-              <button
-                className="btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s"
-                onClick={() => navigate("/kelas")}
-              >
-                Lihat Kelas
-              </button>
-              <button
-                className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s"
-                onClick={() => navigate("/promosi")}
-              >
-                Lihat Promo
-              </button>
+              <div className="animate__animated animate__fadeInUp animate__delay-1s">
+                <button
+                  className="btn btn-danger btn-lg rounded-1 me-2 mb-2"
+                  onClick={() => navigate("/kelas")}
+                >
+                  Lihat Kelas
+                </button>
+                <button
+                  className="btn btn-outline-danger btn-lg rounded-1 mb-2"
+                  onClick={() => navigate("/promosi")}
+                >
+                  Lihat Promo
+                </button>
+              </div>
             </Col>
-            <Col lg="6" className="pt-lg-0 pt-5  ">
+            <Col lg="6" className="pt-lg-0 pt-5 text-center hero-badges animate__animated animate__fadeInUp">
               <img
                 src={HeroImage}
                 alt="hero-img"
-                className="animate__animated animate__fadeInUp"
+                className="animate__animated animate__fadeInUp animate__delay-1s"
               />
             </Col>
           </Row>
@@ -75,13 +73,13 @@ const Home = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold">Kelas Terbaru</h1>
-              <p className="text-center">
+              <h1 className="text-center fw-bold animate__animated animate__fadeInUp" data-aos="fade-up">Kelas Terbaru</h1>
+              <p className="text-center animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
             {kelasTerbaru.map((kelas) => {
               return (
                 <Col
@@ -92,12 +90,10 @@ const Home = () => {
                   data-aos-delay={kelas.delay}
                 >
                   <img
-                    style={{
-                      cursor: "pointer",
-                    }}
+                    style={{ cursor: "pointer" }}
                     src={kelas.image}
                     alt="unsplash.com"
-                    className="w-100 mb-5 rounded-top "
+                    className="w-100 mb-5 rounded-top"
                     onClick={() => handleImageClick(kelas.image)}
                   />
                   <div className="star mb-2 px-3">
@@ -122,28 +118,10 @@ const Home = () => {
                 className="fullscreen-overlay"
                 onClick={handleCloseFullscreen}
               >
-                {/* <IconButton
-                  style={{
-                    backgroundColor: "white",
-                    color: "black",
-                    top: 100,
-                    position: "absolute",
-                    left: 100,
-                    zIndex: 1003,
-                  }}
-                  className="close-button"
-                  aria-label="close"
-                  onClick={handleCloseFullscreen}
-                >
-                  <CloseIcon />
-                </IconButton> */}
                 <div className="fullscreen-image-container">
                   <img
                     src={fullscreenImage}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                    }}
+                    style={{ width: "100%", height: "100%" }}
                     alt="fullscreen"
                     className="fullscreen-image"
                   />
@@ -152,7 +130,7 @@ const Home = () => {
             )}
           </Row>
           <Row>
-            <Col className="text-center">
+            <Col className="text-center mt-5">
               <button
                 className="btn btn-success rounded-5 btn-lg"
                 data-aos="fade-up"
@@ -170,33 +148,19 @@ const Home = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold my-5">Testimonial</h1>
+              <h1 className="text-center fw-bold my-2 animate__animated animate__fadeInUp" data-aos="fade-up">Testimonial</h1>
             </Col>
           </Row>
           <Row>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
+              pagination={{ clickable: true }}
               breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
-                },
-                992: {
-                  slidesPerView: 2,
-                  spaceBetween: 50,
-                },
-                1200: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 40 },
+                992: { slidesPerView: 3, spaceBetween: 50 },
+                1200: { slidesPerView: 3, spaceBetween: 50 },
               }}
               modules={[Pagination]}
               className="mySwiper"

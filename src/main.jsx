@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import Scrol from "./components/ScrollToTop.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./dist/css/main.css";
+import "./main.css";
 import "animate.css";
 
 import AOS from "aos";

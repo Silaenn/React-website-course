@@ -39,7 +39,7 @@ const NavbarComponent = () => {
         } ${isHamburgerClicked ? "color-click" : ""}`}
       >
         <Container>
-          <Navbar.Brand href="#home" className="fs-3 fw-bold">
+          <Navbar.Brand href="#home" className="fs-2 fw-bolder">
             Ngoding.
           </Navbar.Brand>
           <Navbar.Toggle
@@ -47,7 +47,7 @@ const NavbarComponent = () => {
             onClick={handleToggle}
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto text-center">
+            <Nav className="mx-auto">
               {navLinks.map((link) => {
                 return (
                   <div className="nav-link" key={link.id}>
@@ -65,7 +65,7 @@ const NavbarComponent = () => {
               })}
             </Nav>
 
-            <div className="text-center">
+            <div>
               <button
                 className="btn btn-outline-danger rounded-1"
                 onClick={() => navigate("/login")}

@@ -6,8 +6,6 @@ const WAClick = () => {
 };
 
 const Email = () => {
-  // Logika atau tindakan yang ingin Anda lakukan saat tautan diklik
-  // Contoh: Membuka formulir pengiriman email
   window.location.href = "mailto:deokeldisilaen@gmail.com";
 };
 
@@ -20,8 +18,8 @@ const FooterComponent = () => {
             <h3 className="fw-bold">Ngoding.</h3>
             <p className="desc">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum at,
-              voluptatem eaque sed perspiciatis officiis nemo consequatur modi
-              aut dolorem.
+              voluptatem eaque sed perspiciatis officiis nemo consequatur
+              modi aut dolorem.
             </p>
             <div className="no mb-1 mt-4">
               <Link className="text-decoration-none" onClick={WAClick}>
@@ -38,11 +36,13 @@ const FooterComponent = () => {
           </Col>
           <Col className="d-flex flex-column col-lg-2 col mt-lg-0 mt-5">
             <h5 className="fw-bold">Menu</h5>
-            <Link to="/">Home</Link>
-            <Link to="/kelas">Kelas</Link>
-            <Link to="/testimonial">Testimonial</Link>
-            <Link to="/faq">Faq</Link>
-            <Link to="syaratketen">Syarat & Ketentuan</Link>
+            <div className="menu-links">
+              <Link to="/">Home</Link>
+              <Link to="/kelas">Kelas</Link>
+              <Link to="/testimonial">Testimonial</Link>
+              <Link to="/faq">Faq</Link>
+              <Link to="/syaratketen">Syarat & Ketentuan</Link>
+            </div>
           </Col>
           <Col lg="4" className="mt-lg-0 mt-5">
             <h5 className="fw-bold mb-3">Subscribe untuk info Menarik</h5>
@@ -62,9 +62,9 @@ const FooterComponent = () => {
         </Row>
         <Row>
           <Col>
-            <p className="text-center px-md-0  px-3">
+            <p className="text-center px-md-0 px-3">
               &copy; Copyright {new Date().getFullYear()} by
-              <span className="fw-bold">Ngoding Mastery</span>, All Right
+              <span className="fw-bold"> Ngoding Mastery</span>, All Right
               Reserved
             </p>
           </Col>
