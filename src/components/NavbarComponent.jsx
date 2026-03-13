@@ -2,10 +2,8 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
-  let navigate = useNavigate();
   const [changeColor, setChangeColor] = useState(false);
 
   const [isHamburgerClicked, setHamburgerClicked] = useState(false);
@@ -68,7 +66,6 @@ const NavbarComponent = () => {
             <div>
               <button
                 className="btn btn-outline-danger rounded-1"
-                onClick={() => navigate("/login")}
               >
                 Join With Us
               </button>

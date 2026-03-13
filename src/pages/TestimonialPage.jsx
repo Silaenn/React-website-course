@@ -18,17 +18,19 @@ const TestimonialPage = () => {
               </p>
             </Col>
           </Row>
-          <Row className="row-cols-lg-3 row-cols-1">
+          <Row className="mt-5 row-cols-lg-3 row-cols-1">
             {testimonial.map((swiper) => {
               return (
                 <Col key={swiper.id} className="mb-5">
-                  <p className="ps-1">{swiper.desc}</p>
-                  <div className="people desc shadow-sm pb-3 ps-2">
-                    <img src={swiper.image} alt="" />
-                    <div>
-                      <h5 className="mb-1">{swiper.name}</h5>
-                      <p className="m-0 fw-bold ">{swiper.skill}</p>
+                  <div className="testimonial-card shadow-sm p-4">
+                    <div className="d-flex align-items-center mb-3">
+                      <img src={swiper.image} alt={swiper.name} className="me-3" />
+                      <div>
+                        <h5 className="mb-0 fw-bold">{swiper.name}</h5>
+                        <p className="m-0 text-muted small">{swiper.skill}</p>
+                      </div>
                     </div>
+                    <p className="desc m-0">{swiper.desc}</p>
                   </div>
                 </Col>
               );

@@ -7,7 +7,6 @@ import FaqComponent from "./components/FaqComponent";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 import Promosi from "./pages/PromosiPage";
-import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Route path="/testimonial" Component={TestimonialPage} />
         <Route path="/faq" Component={FaqComponent} />
         <Route path="/syaratketen" Component={SyaratKatenPage} />
-        <Route path="/login" Component={LoginPage} />
         <Route path="/promosi" Component={Promosi} />
       </Routes>
       <FooterComponent />

@@ -8,18 +8,18 @@ const SyaratKatenPage = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="fw-bold text-center mb-2 animate__animated animate__fadeInUp animate__delay-1s">
+              <h1 className="fw-bold text-center mb-2 animate__animated animate__fadeInUp ">
                 Syarat & Ketentuan
               </h1>
-              <p className="text-center animate__animated animate__fadeInUp animate__delay-1s">
+              <p className="text-center animate__animated animate__fadeInUp ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </Col>
           </Row>
           <Row className="pt-5">
             <Col>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+              <p className="text-justify">
+                Lorem ipsum dolor sit, amet  consectetur adipisicing elit. Fugit
                 hic consequatur reprehenderit adipisci odio error quae, quasi ea
                 omnis consequuntur eum doloribus, ducimus officiis beatae optio,
                 ratione at iste quis. Perferendis, quos quisquam. Ex, enim.
@@ -31,14 +31,14 @@ const SyaratKatenPage = () => {
           <Row className="py-3">
             <Col>
               <h4 className="fw-bold">1. Lorem</h4>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam, reprehenderit quidem nostrum ratione dolor soluta
                 officiis libero assumenda accusantium fugit odit quae saepe cum
                 maxime, alias dolorum voluptate, iure molestiae. Ex quam quia
                 repellendus natus dignissimos esse, ipsa in beatae.
               </p>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
                 eveniet, reprehenderit est quo asperiores totam commodi facere
                 unde inventore, temporibus libero aliquid voluptas magnam
@@ -48,7 +48,7 @@ const SyaratKatenPage = () => {
                 impedit ea voluptatum voluptatibus! Earum minus ut optio,
                 tempore nisi consequatur deleniti!
               </p>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perferendis sunt repellendus harum dolorem, porro doloribus
                 illum quibusdam, pariatur, voluptate laborum officia aliquam
@@ -65,14 +65,14 @@ const SyaratKatenPage = () => {
           <Row className="py-3">
             <Col>
               <h4 className="fw-bold">2. Lorem</h4>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Exercitationem voluptates fuga sunt provident est beatae eos
                 aperiam velit quia. Illum quo dolorem quae porro corrupti sunt
                 quasi doloremque odio, velit ipsam libero facilis quaerat quos
                 beatae architecto provident saepe ab.
               </p>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque a
                 sunt atque ipsum incidunt iure aspernatur! Facere vitae tempore
                 ipsum maiores! Quis rerum officiis, excepturi odit laboriosam
@@ -90,14 +90,14 @@ const SyaratKatenPage = () => {
           <Row className="py-3">
             <Col>
               <h4 className="fw-bold ">3. Lorem</h4>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
                 eos magnam impedit. Ipsa perspiciatis voluptates accusantium
                 animi fuga maxime qui expedita ipsum, libero sapiente laudantium
                 beatae ipsam eos inventore vitae! Illum, sapiente alias? Odio,
                 quisquam harum? Repellendus culpa vero minus.
               </p>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Reprehenderit laborum mollitia iure totam praesentium. Sapiente
                 non animi deserunt doloribus fugiat nisi adipisci ex nesciunt
@@ -199,7 +199,7 @@ const SyaratKatenPage = () => {
                 ex quidem velit officia expedita sunt quos nobis quis libero
                 vel?
               </p>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
                 saepe quia dicta, repudiandae ad enim rem expedita voluptatibus
                 aut omnis molestiae veritatis id illum nostrum facere commodi

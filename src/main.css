@@ -35,7 +35,12 @@ body {
 .navbar {
   padding: 1.5rem 0;
   transition: var(--transition);
-  background-color: transparent;
+  background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar.color-active {
@@ -47,12 +52,6 @@ body {
 .navbar.color-click {
   background-color: rgba(255, 255, 255, 0.98) !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Navbar transparent saat di awal (tidak di scroll) */
-.navbar:not(.color-active):not(.color-click) {
-  background-color: transparent !important;
-  box-shadow: none;
 }
 
 .navbar-brand {
@@ -390,9 +389,11 @@ body {
   height: auto;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
+  border: none;
 }
 
 .testimonial .swiper-slide:hover {
+  transform: translateY(-10px);
   box-shadow: var(--shadow-hover);
 }
 
@@ -402,6 +403,17 @@ body {
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
   min-height: 120px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.testimonial .desc:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .testimonial .people {
@@ -418,6 +430,43 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.testimonial-page .testimonial-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+  height: 100%;
+}
+
+.testimonial-page .testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-page .testimonial-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.testimonial-page .testimonial-card .desc {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  min-height: auto;
+}
+
+.testimonial-page .testimonial-card .desc:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .testimonial .people h5 {
@@ -443,6 +492,17 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: var(--secondary-color);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ========================================
@@ -528,6 +588,10 @@ body {
   background-color: white;
   color: var(--color-text);
   padding: 4rem 0 2rem 0;
+}
+
+.footer .row:first-child {
+  margin-bottom: 4rem;
 }
 
 .footer h3 {
@@ -788,8 +852,12 @@ body {
 /* ========================================
   KELAS PAGE
 ======================================== */
-.kelas-page .kelas {
+.kelas-page {
   padding-top: 3rem;
+}
+
+.kelas{
+  padding: 5rem 0;
 }
 
 /* ========================================
@@ -799,6 +867,10 @@ body {
   min-height: 100vh;
   padding: 3rem 0;
   background-color: var(--primary-color);
+}
+
+.promosi {
+  padding: 5rem 0;
 }
 
 .promosi-page h1 {
@@ -819,6 +891,7 @@ body {
   transition: var(--transition);
   margin-bottom: 2rem;
   box-shadow: var(--shadow-card);
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .promosi-page .shadow:hover {
@@ -853,7 +926,8 @@ body {
 .promosi-page .diskon {
   font-size: 0.9rem;
   padding: 0 1.25rem;
-  margin: 0.5rem 1.25rem 1rem 1.25rem !important;
+  color: var(--secondary-color);
+  font-weight: 700;
 }
 
 .promosi-page .harga {
@@ -880,16 +954,20 @@ body {
 
 .promosi-page .btn-danger:hover {
   background-color: #c82333;
+  transform: translateY(-2px);
 }
 
 /* ========================================
   SYARAT & KETENTUAN PAGE
 ======================================== */
-.syarat-ketentuan-page,
-.syarat-page {
+.syarat-ketentuan-page {
   min-height: 100vh;
   padding: 3rem 0;
   background-color: var(--primary-color);
+}
+
+.syarat-ketentuan {
+  padding: 5rem 0;
 }
 
 .syarat-ketentuan-page h1,
@@ -897,21 +975,46 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .syarat-ketentuan-page h4,
 .syarat-page h4 {
   color: #1a1a1a;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  animation: fadeInLeft 0.6s ease-out;
 }
 
 .syarat-ketentuan-page p,
 .syarat-page p {
   line-height: 1.8;
   color: var(--color-text-light);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* ========================================
@@ -926,7 +1029,7 @@ body {
 .testimonial-page h1 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial-page .people {
