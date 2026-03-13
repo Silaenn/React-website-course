@@ -2,7 +2,7 @@
 
 A modern, responsive website for an online course platform built with React, Bootstrap, and Vite.
 
-![Website-Course](https://github.com/Silaenn/React-website-course/assets/131638765/2574ec8e-4d63-420e-9e10-85f132c66abd)
+![Website-Course](./public/screenshot.png.png)
 
 ## 🚀 Features
 

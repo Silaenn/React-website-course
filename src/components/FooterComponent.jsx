@@ -1,14 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const WAClick = () => {
-  window.open("https://api.whatsapp.com/send?phone=628989311672", "_blank");
-};
-
-const Email = () => {
-  window.location.href = "mailto:deokeldisilaen@gmail.com";
-};
-
 const FooterComponent = () => {
   return (
     <div className="footer py-5">
@@ -22,13 +14,13 @@ const FooterComponent = () => {
               modi aut dolorem.
             </p>
             <div className="no mb-1 mt-4">
-              <Link className="text-decoration-none" onClick={WAClick}>
+              <Link className="text-decoration-none">
                 <i className="fa-brands fa-whatsapp"></i>
                 <p className="m-0">+62 898-9311-672</p>
               </Link>
             </div>
             <div className="mail">
-              <Link className="text-decoration-none" onClick={Email}>
+              <Link className="text-decoration-none">
                 <i className="fa-regular fa-envelope"></i>
                 <p className="m-0">deokeldisilaen.@gmail.com</p>
               </Link>
