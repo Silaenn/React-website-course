@@ -6,7 +6,7 @@ const FooterComponent = () => {
     <div className="footer py-5">
       <Container>
         <Row className="d-flex justify-content-between">
-          <Col lg="5">
+          <Col lg="5" data-aos="fade-up" data-aos-duration="1000">
             <h3 className="fw-bold">Ngoding.</h3>
             <p className="desc">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum at,
@@ -26,7 +26,7 @@ const FooterComponent = () => {
               </Link>
             </div>
           </Col>
-          <Col className="d-flex flex-column col-lg-2 col mt-lg-0 mt-5">
+          <Col className="d-flex flex-column col-lg-2 col mt-lg-0 mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h5 className="fw-bold">Menu</h5>
             <div className="menu-links">
               <Link to="/">Home</Link>
@@ -36,7 +36,7 @@ const FooterComponent = () => {
               <Link to="/syaratketen">Syarat & Ketentuan</Link>
             </div>
           </Col>
-          <Col lg="4" className="mt-lg-0 mt-5">
+          <Col lg="4" className="mt-lg-0 mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <h5 className="fw-bold mb-3">Subscribe untuk info Menarik</h5>
             <div className="subscribes">
               <input type="text" placeholder="Subscribe..." />
@@ -54,7 +54,7 @@ const FooterComponent = () => {
         </Row>
         <Row>
           <Col>
-            <p className="text-center px-md-0 px-3">
+            <p className="text-center px-md-0 px-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
               &copy; Copyright {new Date().getFullYear()} by
               <span className="fw-bold"> Ngoding Mastery</span>, All Right
               Reserved

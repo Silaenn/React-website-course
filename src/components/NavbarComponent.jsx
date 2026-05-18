@@ -34,7 +34,7 @@ const NavbarComponent = () => {
         expand="lg"
         className={`${
           changeColor && !isHamburgerClicked ? "color-active" : ""
-        } ${isHamburgerClicked ? "color-click" : ""}`}
+        } ${isHamburgerClicked ? "color-click" : ""} animate__animated animate__fadeInDown`}
       >
         <Container>
           <Navbar.Brand href="#home" className="fs-2 fw-bolder">
