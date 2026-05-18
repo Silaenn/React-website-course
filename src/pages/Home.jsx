@@ -90,6 +90,7 @@ const Home = () => {
                   data-aos-duration="1000"
                   data-aos-delay={kelas.delay}
                   data-aos-once="true"
+                  data-aos-offset="0"
                 >
                   <img
                     style={{ cursor: "pointer" }}

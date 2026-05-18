@@ -30,6 +30,7 @@ const PromosiPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay={promo.delay}
+                  data-aos-offset="0"
                 >
                   <div className="shadow rounded h-100">
                     <img
