@@ -13,6 +13,10 @@
   --transition: all 0.3s ease-in-out;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
+
 /* ========================================
   GLOBAL STYLES
 ======================================== */

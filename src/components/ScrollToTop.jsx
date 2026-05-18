@@ -5,11 +5,14 @@ export default function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+    // Gunakan timeout kecil untuk memastikan DOM sudah dirender sepenuhnya
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTo(0, 0);
+      document.body.scrollTo(0, 0);
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
   }, [location.pathname]);
 
   return null;
