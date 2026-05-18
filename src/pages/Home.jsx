@@ -35,16 +35,16 @@ const Home = () => {
         <Container>
           <Row className="header-box d-flex align-items-center justify-content-between pt-lg-5">
             <Col lg="6" className="animate__animated animate__fadeInUp">
-              <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+              <h1 className="mb-4 animate__animated animate__fadeInUp" style={{ animationDelay: "0.2s" }}>
                 Temukan <br /> <span>Bakat Kreatifmu</span> <br /> Bersama Kami!{" "}
               </h1>
-              <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+              <p className="mb-4 animate__animated animate__fadeInUp" style={{ animationDelay: "0.4s" }}>
                 Selamat datang di{" "}
                 <span style={{ fontWeight: "bold" }}>Ngoding.</span> salah satu
                 tempat kursus IT yang canggih dan di akui sebagai saluran bakat
                 anak indonesia
               </p>
-              <div className="animate__animated animate__fadeInUp animate__delay-1s">
+              <div className="animate__animated animate__fadeInUp" style={{ animationDelay: "0.6s" }}>
                 <button
                   className="btn btn-danger btn-lg rounded-1 me-2 mb-2"
                   onClick={() => navigate("/kelas")}
@@ -63,7 +63,8 @@ const Home = () => {
               <img
                 src={HeroImage}
                 alt="hero-img"
-                className="animate__animated animate__fadeInUp animate__delay-1s"
+                className="animate__animated animate__fadeInUp"
+                style={{ animationDelay: "0.5s" }}
               />
             </Col>
           </Row>

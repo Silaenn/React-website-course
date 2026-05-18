@@ -9,10 +9,10 @@ const KelasPage = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="fw-bold text-center animate__animated animate__fadeInUp animate__delay-1s">
+              <h1 className="fw-bold text-center animate__animated animate__fadeInUp" style={{ animationDelay: "0.2s" }}>
                 Semua Kelas
               </h1>
-              <p className="text-center animate__animated animate__fadeInUp animate__delay-1s">
+              <p className="text-center animate__animated animate__fadeInUp" style={{ animationDelay: "0.4s" }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </Col>

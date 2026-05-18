@@ -67,7 +67,7 @@ export const semuaKelas = [
     title: "Character Illustration with Adobe Illustrator",
     price: "Rp. 300.000",
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "100",
   },
   {
     id: 2,
@@ -80,7 +80,7 @@ export const semuaKelas = [
     title: "UI UX Website Design for Beginner with Figma",
     price: "Rp. 340.000",
     buy: "Beli Kelas",
-    delay: "1600",
+    delay: "200",
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const semuaKelas = [
     title: "Mastering Web Developer Bootstrap 5",
     price: "Rp. 280.000",
     buy: "Beli Kelas",
-    delay: "1900",
+    delay: "300",
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ export const semuaKelas = [
     title: "Mastering Logo with Adobe Illustrator",
     price: "Rp. 420.000",
     buy: "Beli Kelas",
-    delay: "",
+    delay: "400",
   },
   {
     id: 5,
@@ -119,7 +119,7 @@ export const semuaKelas = [
     title: "3D Modelling for Beginner with 3D Blender",
     price: "Rp. 380.000",
     buy: "Beli Kelas",
-    delay: "300",
+    delay: "500",
   },
   {
     id: 6,
@@ -145,7 +145,7 @@ export const semuaKelas = [
     title: "Design Vektor with Corel Draw CC for Beginner",
     price: "Rp. 340.000",
     buy: "Beli Kelas",
-    delay: "",
+    delay: "700",
   },
   {
     id: 8,
@@ -158,7 +158,7 @@ export const semuaKelas = [
     title: "UI UX Design with Adobe XD for Beginner",
     price: "Rp. 400.000",
     buy: "Beli Kelas",
-    delay: "300",
+    delay: "800",
   },
   {
     id: 9,
@@ -171,7 +171,7 @@ export const semuaKelas = [
     title: "Mastering Mobile Developer with Flutter",
     price: "Rp. 320.000",
     buy: "Beli Kelas",
-    delay: "600",
+    delay: "900",
   },
 ];
 
@@ -187,7 +187,7 @@ export const kelasTerbaru = [
     title: "Character Illustration with Adobe Illustrator",
     price: "Rp. 300.000",
     buy: "Beli Kelas",
-    delay: "",
+    delay: "100",
   },
   {
     id: 2,
@@ -213,7 +213,7 @@ export const kelasTerbaru = [
     title: "Mastering Web Developer Bootstrap 5",
     price: "Rp. 280.000",
     buy: "Beli Kelas",
-    delay: "400",
+    delay: "300",
   },
   {
     id: 4,
@@ -226,7 +226,7 @@ export const kelasTerbaru = [
     title: "Mastering Logo with Adobe Illustrator",
     price: "Rp. 420.000",
     buy: "Beli Kelas",
-    delay: "",
+    delay: "400",
   },
   {
     id: 5,
@@ -239,7 +239,7 @@ export const kelasTerbaru = [
     title: "3D Modelling for Beginner with 3D Blender",
     price: "Rp. 380.000",
     buy: "Beli Kelas",
-    delay: "200",
+    delay: "500",
   },
   {
     id: 6,
@@ -252,33 +252,7 @@ export const kelasTerbaru = [
     title: "Mastering Icon Design with Adobe Illustrator",
     price: "Rp. 300.000",
     buy: "Beli Kelas",
-    delay: "400",
-  },
-  {
-    id: 7,
-    image: KelasImage7,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Digital Marketing",
-    price: "Rp. 500.000",
-    buy: "Beli Kelas",
-    delay: "400",
-  },
-  {
-    id: 8,
-    image: KelasImage8,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star",
-    title: "Learn English",
-    price: "Rp. 500.000",
-    buy: "Beli Kelas",
-    delay: "",
+    delay: "600",
   },
 ];
 
@@ -452,7 +426,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "100",
   },
   {
     id: 2,
@@ -461,7 +435,7 @@ export const promosi = [
     price: 1500000,
     discount: 20,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "200",
   },
   {
     id: 3,
@@ -470,7 +444,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "300",
   },
   {
     id: 4,
@@ -479,7 +453,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "400",
   },
   {
     id: 5,
@@ -488,7 +462,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "500",
   },
   {
     id: 6,
@@ -497,7 +471,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "600",
   },
   {
     id: 7,
@@ -506,7 +480,7 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "700",
   },
   {
     id: 8,
@@ -515,6 +489,6 @@ export const promosi = [
     price: 300000,
     discount: 10,
     buy: "Beli Kelas",
-    delay: "1300",
+    delay: "800",
   },
 ];
