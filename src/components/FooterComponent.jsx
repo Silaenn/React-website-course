@@ -39,8 +39,8 @@ const FooterComponent = () => {
           <Col lg="4" className="mt-lg-0 mt-5">
             <h5 className="fw-bold mb-3">Subscribe untuk info Menarik</h5>
             <div className="subscribes">
-              <input type="text" placeholder="Subscribe" />
-              <button className="btn btn-danger rounded-end rounded-0">
+              <input type="text" placeholder="Subscribe..." />
+              <button className="btn btn-danger">
                 Subscribe
               </button>
             </div>

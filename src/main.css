@@ -665,6 +665,23 @@ body {
   border-color: #c82333;
 }
 
+@media screen and (max-width: 575px) {
+  .footer .subscribes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer .subscribes input {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .footer .subscribes .btn {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
 .footer .sosial {
   display: flex;
   gap: 1rem;
