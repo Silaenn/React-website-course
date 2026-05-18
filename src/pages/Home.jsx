@@ -73,8 +73,8 @@ const Home = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold animate__animated animate__fadeInUp" data-aos="fade-up">Kelas Terbaru</h1>
-              <p className="text-center animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
+              <h1 className="text-center fw-bold" data-aos="fade-up" data-aos-once="true">Kelas Terbaru</h1>
+              <p className="text-center" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </Col>
@@ -85,9 +85,10 @@ const Home = () => {
                 <Col
                   key={kelas.id}
                   className="shadow rounded"
-                  data-aos="flip-left"
+                  data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay={kelas.delay}
+                  data-aos-once="true"
                 >
                   <img
                     style={{ cursor: "pointer" }}
@@ -132,26 +133,26 @@ const Home = () => {
           <Row>
             <Col className="text-center mt-5">
               <button
-                className="btn btn-success rounded-5 btn-lg"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                onClick={() => navigate("/kelas")}
+              className="btn btn-success rounded-5 btn-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              onClick={() => navigate("/kelas")}
               >
-                Lihat Semua Kelas
-                <i className="fa-solid fa-chevron-right ms-3"></i>
+              Lihat Semua Kelas
+              <i className="fa-solid fa-chevron-right ms-3"></i>
               </button>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div className="testimonial py-5">
-        <Container>
-          <Row>
-            <Col>
-              <h1 className="text-center fw-bold my-2 animate__animated animate__fadeInUp" data-aos="fade-up">Testimonial</h1>
-            </Col>
-          </Row>
-          <Row>
+              </Col>
+              </Row>
+              </Container>
+              </div>
+              <div className="testimonial py-5">
+              <Container>
+              <Row>
+              <Col>
+              <h1 className="text-center fw-bold my-2" data-aos="fade-up" data-aos-once="true">Testimonial</h1>
+              </Col>
+              </Row>          <Row>
             <Swiper
               slidesPerView={1}
               spaceBetween={10}

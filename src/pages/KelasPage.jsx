@@ -26,6 +26,7 @@ const KelasPage = () => {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay={kelas.delay}
+                  data-aos-once="true"
                 >
                   <img
                     src={kelas.image}

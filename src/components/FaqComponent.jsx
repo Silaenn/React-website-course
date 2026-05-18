@@ -7,16 +7,16 @@ const FaqComponent = () => {
       <Container>
         <Row>
           <Col>
-            <h2 className="text-center fw-bold animate__animated animate__fadeInUp">
+            <h2 className="text-center fw-bold" data-aos="fade-up" data-aos-once="true">
               Pertanyaan Yang Sering Ditanyakan
             </h2>
           </Col>
         </Row>
-        <Row className="row-cols-1 row-cols-lg-2 g-4 pt-4">
+        <Row className="row-cols-1 row-cols-lg-2 g-4 pt-5">
           {faq.map((data, index) => {
             return (
-              <Col key={data.id} className="animate__animated animate__fadeInUp" style={{ animationDelay: `${index * 0.1}s` }}>
-                <Accordion>
+              <Col key={data.id} data-aos="fade-up" data-aos-delay={index * 100} data-aos-once="true">
+                <Accordion className="shadow-sm border-0">
                   <Accordion.Item eventKey={data.eventKey}>
                     <Accordion.Header>{data.title}</Accordion.Header>
                     <Accordion.Body>{data.desc}</Accordion.Body>
