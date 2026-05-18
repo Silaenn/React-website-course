@@ -548,7 +548,7 @@ body {
   font-weight: 600;
   color: var(--color-text);
   background-color: white;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 0.95rem;
   border: none;
 }
@@ -557,6 +557,7 @@ body {
   background-color: white;
   color: var(--color-text);
   box-shadow: none;
+  padding-bottom: 0.5rem;
 }
 
 .faq .accordion-button:focus {
@@ -575,10 +576,10 @@ body {
 }
 
 .faq .accordion-body {
-  padding: 1.25rem 1.5rem;
+  padding: 0.5rem 1.5rem 1.25rem 1.5rem;
   line-height: 1.8;
   color: var(--color-text-light);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: none;
 }
 
 /* ========================================

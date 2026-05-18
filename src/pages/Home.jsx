@@ -152,7 +152,8 @@ const Home = () => {
               <Col>
               <h1 className="text-center fw-bold my-2" data-aos="fade-up" data-aos-once="true">Testimonial</h1>
               </Col>
-              </Row>          <Row>
+              </Row>
+          <Row data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <Swiper
               slidesPerView={1}
               spaceBetween={10}
