@@ -683,6 +683,23 @@ body {
   }
 }
 
+@media (max-width: 1290px) {
+  .footer .subscribes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer .subscribes input {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .footer .subscribes .btn {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
 .footer .sosial {
   display: flex;
   gap: 1rem;
@@ -1299,4 +1316,49 @@ body {
 
 .animate__delay-1s {
   animation-delay: 1s;
+}
+
+/* ========================================
+  FOOTER RESPONSIVE FIX
+======================================== */
+@media (max-width: 991px) {
+  .footer {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+  }
+
+  .footer .row:first-child>div {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer .row:first-child>div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
+
+  .footer h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer h5 {
+    font-size: 1rem;
+  }
+
+  .footer .desc {
+    font-size: 0.9rem;
+  }
+
+  .footer .menu-links {
+    gap: 0.5rem;
+  }
+
+  .footer .text-center p {
+    font-size: 0.8rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
 }
