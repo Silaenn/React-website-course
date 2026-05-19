@@ -71,7 +71,7 @@ const Home = () => {
         </Container>
       </header>
       <div className="kelas w-100 min-vh-100">
-        <Container fluid className="px-md-5">
+        <Container>
           <Row>
             <Col>
               <h1 className="text-center fw-bold" data-aos="fade-up" data-aos-once="true">Kelas Terbaru</h1>
@@ -80,7 +80,7 @@ const Home = () => {
               </p>
             </Col>
           </Row>
-          <Row className="row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3">
+          <Row className="row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-4 g-md-5 mb-5">
             {kelasTerbaru.map((kelas) => {
               return (
                 <Col

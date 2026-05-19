@@ -6,7 +6,6 @@ import KelasImage5 from "../assets/img/kelas/kelas-5.jpg";
 import KelasImage6 from "../assets/img/kelas/kelas-6.jpg";
 import KelasImage7 from "../assets/img/kelas/kelas-7.jpg";
 import KelasImage8 from "../assets/img/kelas/kelas-8.jpg";
-import KelasImage9 from "../assets/img/kelas/kelas-9.jpg";
 
 import Promosi1 from "../assets/img/promosi/it.jpg";
 import Promosi2 from "../assets/img/promosi/ayo.png";
@@ -14,8 +13,6 @@ import Promosi3 from "../assets/img/promosi/baju.webp";
 import Promosi4 from "../assets/img/promosi/it2.jpg";
 import Promosi5 from "../assets/img/promosi/it3.jpg";
 import Promosi6 from "../assets/img/promosi/ra.jpg";
-import Promosi7 from "../assets/img/promosi/Milo.jpg";
-import Promosi8 from "../assets/img/promosi/ji.jpg";
 
 import People1 from "../assets/img/testimonial/people-1.jpg";
 import People2 from "../assets/img/testimonial/people-2.jpg";
@@ -159,19 +156,6 @@ export const semuaKelas = [
     price: "Rp. 400.000",
     buy: "Beli Kelas",
     delay: "400",
-  },
-  {
-    id: 9,
-    image: KelasImage9,
-    star1: "fa-solid fa-star",
-    star2: "fa-solid fa-star",
-    star3: "fa-solid fa-star",
-    star4: "fa-solid fa-star",
-    star5: "fa-solid fa-star-half-stroke",
-    title: "Mastering Mobile Developer with Flutter",
-    price: "Rp. 320.000",
-    buy: "Beli Kelas",
-    delay: "100",
   },
 ];
 
@@ -498,23 +482,5 @@ export const promosi = [
     discount: 10,
     buy: "Beli Kelas",
     delay: "300",
-  },
-  {
-    id: 7,
-    image: Promosi7,
-    title: "Character Illustration with Adobe Illustrator",
-    price: 300000,
-    discount: 10,
-    buy: "Beli Kelas",
-    delay: "100",
-  },
-  {
-    id: 8,
-    image: Promosi8,
-    title: "Character Illustration with Adobe Illustrator",
-    price: 300000,
-    discount: 10,
-    buy: "Beli Kelas",
-    delay: "200",
   },
 ];
