@@ -1182,38 +1182,45 @@ body {
   .hero-badge {
     display: none;
   }
-
-/* Animasi Navbar Hamburger yang lebih halus */
-.navbar-custom .navbar-collapse {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  display: block; /* Memaksa display untuk animasi */
-}
-
-.navbar-custom .navbar-collapse.show {
-  max-height: 500px; /* Angka cukup untuk menampung menu */
-  opacity: 1;
-}
-
-@media (max-width: 991px) {
-  .navbar-custom .navbar-collapse {
-    width: 100%;
-    text-align: center;
-    padding: 0;
-  }
-
-  .navbar-custom.navbar-expand-lg .navbar-collapse.show {
-    padding: 1rem 0;
-  }
-}
-
+  
   .kelas h1,
   .testimonial h1,
   .faq h2 {
     font-size: 1.75rem;
   }
+}
+  
+  /* ========================================
+  NAVBAR COLLAPSE CUSTOM ANIMATION
+  ======================================== */
+@media (min-width: 992px) {
+  .navbar-collapse-custom {
+    display: flex !important;
+      flex-basis: auto;
+      align-items: center;
+      flex-grow: 1;
+    }
+  }
+  
+@media (max-width: 991px) {
+  .navbar-collapse-custom {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  }
+  
+  .navbar-collapse-custom.is-open {
+    max-height: 500px;
+    opacity: 1;
+  }
+  
+  .navbar-collapse-custom.is-closing {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    }
 }
 
 @media (max-width: 768px) {
