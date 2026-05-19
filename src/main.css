@@ -391,14 +391,12 @@ body {
   border-radius: 15px;
   padding: 2rem;
   height: auto;
-  box-shadow: var(--shadow-card);
   transition: var(--transition);
   border: none;
 }
 
 .testimonial .swiper-slide:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-hover);
 }
 
 .testimonial .desc {
@@ -410,14 +408,12 @@ body {
   background: white;
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: var(--shadow-card);
   transition: var(--transition);
   animation: fadeInUp 0.6s ease-out;
 }
 
 .testimonial .desc:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
 }
 
 .testimonial .people {

@@ -171,9 +171,9 @@ const Home = () => {
             >
               {dataSwiper.map((swiper) => {
                 return (
-                  <SwiperSlide key={swiper.id} className="shadow-sm">
+                  <SwiperSlide key={swiper.id}>
                     <p className="desc">{swiper.desc}</p>
-                    <div className="people desc shadow-sm pb-3 ps-2">
+                    <div className="people pb-3 ps-2">
                       <img src={swiper.image} alt="" />
                       <div>
                         <h5 className="mb-1">{swiper.name}</h5>
