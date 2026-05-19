@@ -1183,22 +1183,29 @@ body {
     display: none;
   }
 
-/* Tambahan untuk Navbar Hamburger */
-.navbar-collapse {
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+/* Animasi Navbar Hamburger yang lebih halus */
+.navbar-custom .navbar-collapse {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  display: block; /* Memaksa display untuk animasi */
+}
+
+.navbar-custom .navbar-collapse.show {
+  max-height: 500px; /* Angka cukup untuk menampung menu */
+  opacity: 1;
 }
 
 @media (max-width: 991px) {
   .navbar-custom .navbar-collapse {
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0;
   }
 
-  .navbar-custom .nav-link {
-    width: 100%;
-    margin: 0.5rem 0;
-    display: block;
+  .navbar-custom.navbar-expand-lg .navbar-collapse.show {
+    padding: 1rem 0;
   }
 }
 
