@@ -1183,17 +1183,24 @@ body {
     display: none;
   }
 
-  .navbar-collapse {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-    box-shadow: var(--shadow-card);
+/* Tambahan untuk Navbar Hamburger */
+.navbar-collapse {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .navbar-custom .navbar-collapse {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
   }
 
-  .nav-link {
+  .navbar-custom .nav-link {
+    width: 100%;
     margin: 0.5rem 0;
+    display: block;
   }
+}
 
   .kelas h1,
   .testimonial h1,

@@ -1,40 +1,50 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
-
   const [isHamburgerClicked, setHamburgerClicked] = useState(false);
+  const navbarRef = useRef(null);
+
   const changeBackgroundColor = () => {
-    if (window.scrollY > 10) {
-      setChangeColor(true);
-    } else {
-      setChangeColor(false);
-    }
+    setChangeColor(window.scrollY > 10);
   };
 
   const handleToggle = () => {
     setHamburgerClicked(!isHamburgerClicked);
   };
 
+  // Close menu when clicking outside
   useEffect(() => {
-    changeBackgroundColor();
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setHamburgerClicked(false);
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", changeBackgroundColor);
-
     return () => {
       window.removeEventListener("scroll", changeBackgroundColor);
     };
   }, []);
+
   return (
-    <div>
+    <div ref={navbarRef}>
       <Navbar
         expand="lg"
+        expanded={isHamburgerClicked}
         className={`${
           changeColor && !isHamburgerClicked ? "color-active" : ""
-        } ${isHamburgerClicked ? "color-click" : ""} animate__animated animate__fadeInDown`}
+        } ${isHamburgerClicked ? "color-click" : ""} navbar-custom animate__animated animate__fadeInDown`}
       >
         <Container>
           <Navbar.Brand href="#home" className="fs-2 fw-bolder">
@@ -45,28 +55,22 @@ const NavbarComponent = () => {
             onClick={handleToggle}
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
-              {navLinks.map((link) => {
-                return (
-                  <div className="nav-link" key={link.id}>
-                    <NavLink
-                      to={link.path}
-                      className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
-                      }
-                      end
-                    >
-                      {link.text}
-                    </NavLink>
-                  </div>
-                );
-              })}
+            <Nav className="ms-auto text-center">
+              {navLinks.map((link) => (
+                <div className="nav-link" key={link.id} onClick={() => setHamburgerClicked(false)}>
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    end
+                  >
+                    {link.text}
+                  </NavLink>
+                </div>
+              ))}
             </Nav>
 
-            <div>
-              <button
-                className="btn btn-outline-danger rounded-1"
-              >
+            <div className="text-center mt-3 mt-lg-0">
+              <button className="btn btn-outline-danger rounded-1">
                 Join With Us
               </button>
             </div>
