@@ -1,7 +1,7 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { navLinks } from "../data/index";
 import { NavLink } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
@@ -13,7 +13,7 @@ const NavbarComponent = () => {
     setChangeColor(window.scrollY > 10);
   };
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     if (isHamburgerClicked) {
       // Trigger closing animation dulu
       setIsClosing(true);
@@ -24,9 +24,9 @@ const NavbarComponent = () => {
     } else {
       setHamburgerClicked(true);
     }
-  };
+  }, [isHamburgerClicked]);
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     if (isHamburgerClicked) {
       setIsClosing(true);
       setTimeout(() => {
@@ -34,7 +34,7 @@ const NavbarComponent = () => {
         setIsClosing(false);
       }, 350);
     }
-  };
+  }, [isHamburgerClicked]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -44,6 +44,17 @@ const NavbarComponent = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [closeMenu]);
+
+  useEffect(() => {
+    if (isHamburgerClicked) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isHamburgerClicked]);
 
   useEffect(() => {
@@ -53,15 +64,21 @@ const NavbarComponent = () => {
 
   return (
     <div ref={navbarRef}>
+      <div
+        className={`navbar-overlay ${isHamburgerClicked ? "active" : ""} ${
+          isClosing ? "is-closing" : ""
+        }`}
+        onClick={closeMenu}
+      ></div>
       <Navbar
-        expand="lg"
+        expand="xl"
         expanded={isHamburgerClicked}
         className={`${changeColor && !isHamburgerClicked ? "color-active" : ""} ${
           isHamburgerClicked ? "color-click" : ""
         } navbar-custom animate__animated animate__fadeInDown`}
       >
         <Container>
-          <Navbar.Brand href="#home" className="fs-2 fw-bolder">
+          <Navbar.Brand href="#home" className="fs-3 fw-bolder">
             Ngoding.
           </Navbar.Brand>
           <Navbar.Toggle
@@ -75,9 +92,9 @@ const NavbarComponent = () => {
             } ${isClosing ? "is-closing" : ""}`}
             id="basic-navbar-nav"
           >
-            <Nav className="ms-auto text-center">
+            <Nav className="ms-auto">
               {navLinks.map((link) => (
-                <div className="nav-link" key={link.id} onClick={closeMenu}>
+                <div className="nav-link text-center" key={link.id} onClick={closeMenu}>
                   <NavLink
                     to={link.path}
                     className={({ isActive }) => (isActive ? "active" : "")}
@@ -88,7 +105,7 @@ const NavbarComponent = () => {
                 </div>
               ))}
             </Nav>
-            <div className="text-center mt-3 mt-lg-0">
+            <div className="text-center mt-3 mt-xl-0 ms-xl-3">
               <button className="btn btn-outline-danger rounded-1">
                 Join With Us
               </button>

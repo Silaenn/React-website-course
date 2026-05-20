@@ -133,6 +133,32 @@ body {
   }
 }
 
+/* Navbar Overlay & Blur */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-overlay.is-closing {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* ========================================
   HEADER / HERO SECTION
 ======================================== */
@@ -1231,17 +1257,22 @@ body {
   /* ========================================
   NAVBAR COLLAPSE CUSTOM ANIMATION
   ======================================== */
-@media (min-width: 992px) {
+  .navbar-collapse-custom {
+  display: none;
+  }
+
+  @media (min-width: 1200px) {
   .navbar-collapse-custom {
     display: flex !important;
-      flex-basis: auto;
-      align-items: center;
-      flex-grow: 1;
-    }
+    flex-basis: auto;
+    align-items: center;
+    flex-grow: 1;
   }
-  
-@media (max-width: 991px) {
+  }
+
+  @media (max-width: 1199px) {
   .navbar-collapse-custom {
+    display: block;
     width: 100%;
     text-align: center;
     overflow: hidden;
