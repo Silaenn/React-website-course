@@ -40,14 +40,14 @@ const NavbarComponent = () => {
   return (
     <div ref={navbarRef}>
       <Navbar
-        expand="lg"
+        expand="xl"
         expanded={isHamburgerClicked}
         className={`${
           changeColor && !isHamburgerClicked ? "color-active" : ""
         } ${isHamburgerClicked ? "color-click" : ""} navbar-custom animate__animated animate__fadeInDown`}
       >
         <Container>
-          <Navbar.Brand href="#home" className="fs-2 fw-bolder">
+          <Navbar.Brand href="#home" className="fs-3 fw-bolder">
             Ngoding.
           </Navbar.Brand>
           <Navbar.Toggle
@@ -55,9 +55,9 @@ const NavbarComponent = () => {
             onClick={handleToggle}
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto text-center">
+            <Nav className="ms-auto">
               {navLinks.map((link) => (
-                <div className="nav-link" key={link.id} onClick={() => setHamburgerClicked(false)}>
+                <div className="nav-link text-center" key={link.id} onClick={() => setHamburgerClicked(false)}>
                   <NavLink
                     to={link.path}
                     className={({ isActive }) => (isActive ? "active" : "")}
@@ -69,7 +69,7 @@ const NavbarComponent = () => {
               ))}
             </Nav>
 
-            <div className="text-center mt-3 mt-lg-0">
+            <div className="text-center mt-3 mt-xl-0 ms-xl-3">
               <button className="btn btn-outline-danger rounded-1">
                 Join With Us
               </button>

@@ -112,6 +112,27 @@ body {
   color: white;
 }
 
+/* Responsive Navbar for 1366px and similar laptop screens */
+@media (min-width: 992px) and (max-width: 1399px) {
+  .navbar-brand {
+    font-size: 1.35rem !important;
+  }
+  
+  .nav-link {
+    margin: 0 0.3rem !important;
+  }
+  
+  .nav-link a {
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .navbar .btn-outline-danger {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
 /* ========================================
   HEADER / HERO SECTION
 ======================================== */
