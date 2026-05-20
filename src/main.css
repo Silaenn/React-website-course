@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: auto !important;
+  overscroll-behavior: none;
 }
 
 /* ========================================
@@ -31,6 +32,7 @@ body {
   color: var(--color-text);
   background-color: var(--primary-color);
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* ========================================
